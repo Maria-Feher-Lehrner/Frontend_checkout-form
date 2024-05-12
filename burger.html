@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Best Fastfood</title>
+    <link rel="stylesheet" href="assets/css/burger.css">
+
+    <script src="js/ClassOrder.js"></script>
+    <script src="js/ClassReceipt.js"></script>
+    <script src="js/burger_order.js"></script>
+
+
+</head>
+
+<body>
+<section id="header">
+    <header>
+        <h1>Get the Best Burger</h1>
+        <h2>Schritt 1 von 3</h2>
+    </header>
+</section>
+
+<section id="image">
+    <img id="banner" src="assets/img/banner_burger.jpg" width="100%" alt="Close up image of a cheeseburger with fries">
+</section>
+
+<section id="bestellung">
+    <form id="eingabe">
+        <h3 id="headerBestellung">Bestellung</h3>
+        <h3 id="headerPreis">Preis/Stk</h3>
+
+        <p id="maincourse" class="menue">Cheeseburger</p><br>
+        <p id="priceMaincourse" class="pricetag">€ 5,00</p>
+
+        <label for="anzahlMaincourse" id="labelAnzahlMaincourse">Bestellmenge Burger</label>
+        <input type="number" name="anzahlMaincourse" class="Bestellmengenfeld" id="anzahlMaincourse" min="0" value="0"><br>
+
+        <label for="drink" class="menue" id="labelDrink">Getränk</label><br>
+        <select name="drink" id="drink">
+            <option value="Cola">Cola</option>
+            <option value="Fanta">Fanta</option>
+            <option value="Sprite">Sprite</option>
+        </select>
+        <p id="priceDrinks" class="pricetag">€ 3,00</p><br>
+
+        <label for="anzahlDrinks" id="labelAnzahlDrinks">Bestellmenge Getränke</label>
+        <input type="number" name="anzahlDrinks" class="Bestellmengenfeld" id="anzahlDrinks" min="0" value="0"><br>
+
+        <p id="sides" class="menue">Beilagen</p><br>
+        <input type="radio" id="fries" name="sides" value="Pommes">
+        <label for="fries" id="labelFries">Pommes</label>
+        <input type="radio" id="salad" name="sides" value="Salat">
+        <label for="salad" id="labelSalad">Salat</label>
+        <p id="priceSalad" class="pricetag">€ 2,00</p><br>
+        <p id="priceFries" class="pricetag">€ 3,50</p><br>
+
+        <label for="anzahlSides" id="labelAnzahlSides">Bestellmenge Beilagen</label>
+        <input type="number" name="anzahlSides" class="Bestellmengenfeld" id="anzahlSides" min="0" value="0"><br>
+
+        <p id="discountPointer">Bist du sicher, dass du satt wirst? Ab einer Bestellmenge von mehr als € 10,00 bekommst du von uns 15% Rabatt!</p>
+
+        <div class="button-frame">
+            <button onclick="takeAndDisplayOrder(event)" class="bestellen" role="button">Bestellen</button>
+        </div>
+    </form>
+    <div id="containerForm">
+
+    </div>
+</section>
+
+<section id="abschluss">
+    <h2 id="HeadlineBestelluebersicht"></h2>
+    <div id="containerFehlermeldung"></div>
+    <div id="containerReceipt">
+
+    </div>
+
+</section>
+<footer>
+    <p id="footer-text">Bildquelle: © geralt/pixabay.com (AI generated)</p>
+</footer>
+</body>
+
+</html>

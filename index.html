@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Formular</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="assets/css/mystyle.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="burger.html"
+                       target="_blank">Bestellen</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="CV.html" target="_blank">Über uns</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Reservierung (coming soon)</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <div class="container-fluid" id="banner">
+        <div    id="wrapper"
+                class="    container-fluid mt-3
+                    col-md-6 col-lg-4 position-absolute top-0 start-50 translate-middle-x
+                    shadow p-3 mb-5 bg-body-tertiary rounded">
+            <div class="page-header">
+                <h1 class="d-inline-block">Checkout <span class="text-black-50 fs-3">Schritt 2 von 3</span></h1>
+            </div>
+            <div class="row mt-5">
+                <h2>Login</h2>
+                <div class="mt-2">
+                    <label for="email" class="form-label">E-Mailaddresse</label>
+                    <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                </div>
+                <div class="mt-2">
+                    <label for="inputPassword5" class="form-label">Password</label>
+                    <input type="password" id="inputPassword5" class="form-control">
+                </div>
+                <div class="mt-3">
+                    <button type="button" class="btn btn-primary" id="login-btn">Login</button>
+                </div>
+                <p><a class="link-opacity-25-hover" href="#">Als Neukunde registrieren</a></p>
+
+                <form class="row g-3">
+                    <h2>Als Gast bestellen</h2>
+                    <div class="mt-2">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Anrede</option>
+                            <option value="female">Frau</option>
+                            <option value="male">Herr</option>
+                            <option value="neutral">Neutrale Anrede</option>
+                        </select>
+                    </div>
+                    <div class="mt-2">
+                        <label for="firstName" class="form-label">Vorname*</label>
+                        <input type="text" id="firstName" class="form-control" required>
+                        <div class="invalid-feedback">
+                            Bitte geben Sie einen Vornamen an.
+                        </div>
+
+                    </div>
+                    <div class="mt-2">
+                        <label for="lastName" class="form-label">Nachname*</label>
+                        <input type="text" id="lastName" class="form-control" required>
+                    </div>
+                    <div class="mt-2 mb-3">
+                        <label for="age" class="form-label">Geburtsdatum</label>
+                        <input type="date" id="age" class="form-control">
+                    </div>
+
+                    <p>Lieferadresse</p>
+                    <div class="input-group mb-2">
+                        <span class="input-group-text" id="address-street">Strasse*</span>
+                        <input type="text" class="form-control" aria-label="address-street" required>
+                    </div>
+                    <div class="input-group mb-2">
+                        <span class="input-group-text" id="address-streetnumber">Hausnummer/Adresszusatz*</span>
+                        <input type="text" class="form-control" aria-label="address-streetnumber" required>
+                    </div>
+                    <div class="input-group mb-2">
+                        <span class="input-group-text" id="zip-code">Postleitzahl*</span>
+                        <input type="number" class="form-control" aria-label="zip-code" required>
+                    </div>
+                    <div class="input-group mb-2">
+                        <span class="input-group-text" id="city">Ort*</span>
+                        <input type="text" class="form-control" aria-label="city" required>
+                    </div>
+                    <div class="input-group mb-2">
+                        <label class="input-group-text" for="inputGroupSelectAddress">Land*</label>
+                        <select class="form-select" id="inputGroupSelectAddress" required>
+                            <option value="" selected>Land auswählen</option>
+                            <option value="AUT">Österreich</option>
+                            <option value="GER">Deutschland</option>
+                            <option value="CH">Schweiz</option>
+                        </select>
+                    </div>
+
+                    <div class="accordion mb-3" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    Optional: abweichende Rechnungsadresse
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="input-group mb-2">
+                                        <span class="input-group-text" id="receipt-street">Strasse</span>
+                                        <input type="text" class="form-control" aria-label="billing-street">
+                                    </div>
+                                    <div class="input-group mb-2">
+                                        <span class="input-group-text" id="billing-streetnumber">Hausnr./Adresszusatz</span>
+                                        <input type="text" class="form-control" aria-label="billing-streetnumber">
+                                    </div>
+                                    <div class="input-group mb-2">
+                                        <span class="input-group-text" id="billing-zip-code">Postleitzahl</span>
+                                        <input type="number" class="form-control" aria-label="billing-zip-code">
+                                    </div>
+                                    <div class="input-group mb-2">
+                                        <span class="input-group-text" id="billing-city">Ort</span>
+                                        <input type="text" class="form-control" aria-label="billing-city">
+                                    </div>
+                                    <div class="input-group mb-2">
+                                        <label class="input-group-text" for="BillingDataList">Land</label>
+                                        <input class="form-control" list="datalistOptionsBilling" id="BillingDataList">
+                                        <datalist id="datalistOptionsBilling">
+                                            <option value="Österreich">
+                                            <option value="Deutschland">
+                                            <option value="Schweiz">
+                                        </datalist>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Zahlungsoptionen*</h2>
+                    <div class="mt-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="Creditcard" value="CC"
+                                   required>
+                            <label class="form-check-label" for="Creditcard">
+                                VISA/Mastercard
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="onlineBanking"
+                                   value="bank" required>
+                            <label class="form-check-label" for="onlineBanking">
+                                Sofortüberweisung
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="PayPal" value="PP"
+                                   required>
+                            <label class="form-check-label" for="PayPal">
+                                Paypal
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="mt-3">
+                        <label for="additionalInfo" class="form-label">Wollen Sie uns zu Ihrer Lieferung noch irgendetwas
+                            mitteilen?</label>
+                        <textarea class="form-control" id="additionalInfo" rows="3"></textarea>
+                    </div>
+
+                    <div class="mt-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
+                            <label class="form-check-label" for="flexCheckDefault">
+                                * Ja, ich habe die <a class="link-opacity-25-hover" href="#">Datenschutzerklärung</a>
+                                gelesen
+                                und
+                                akzeptiere sie.
+                            </label>
+                            <div class="invalid-feedback">
+                                Bitte akzeptieren Sie die Datenschutzerklärung.
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="mt-3">
+                        <button type="submit" class="btn btn-primary" id="submit-btn">Weiter zur Zahlung</button>
+                        <p class="mt-2 mb-3">* Pflichtfelder</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
